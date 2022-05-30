@@ -40,6 +40,10 @@ public class Program {
 		seller.setName("Levi da Silva Lima");
 		seller.setEmail("vilinhanetflix@gmail.com");
 		sellerDao.update(seller);
+		
+		System.out.println("\n=== TEST 6: seller delete ===");
+		seller = sellerDao.findById(1);
+		sellerDao.deleteById(seller.getId());
 	}
 
 }
