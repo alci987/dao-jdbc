@@ -34,6 +34,12 @@ public class Program {
 		Seller newSeller = new Seller(null, "João Victor", "joaovictorkali@gmail.com", new Date(), 4900.0, dep);
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted. New Id = " + newSeller.getId());
+		
+		System.out.println("\n=== TEST 5: seller update ===");
+		seller = sellerDao.findById(9);
+		seller.setName("Levi da Silva Lima");
+		seller.setEmail("vilinhanetflix@gmail.com");
+		sellerDao.update(seller);
 	}
 
 }
